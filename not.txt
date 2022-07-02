@@ -1,0 +1,17 @@
+React js - Bootstrap.css -scss
+Wordpress Headless API'den postlar çekilecek.
+
+Olacaklar:
+-Scss
+-Skeleton loading 
+-google lighthouse puanlama
+-lazyload
+-react-router-dom
+-redux-thunk-asynch
+-dark theme
+
+
+
+
+Firebase Authen..  (authen.. eticaret projesinde olcak)
+
