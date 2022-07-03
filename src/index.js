@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './Assets/Css/bootstrap.min.css'
+import './Assets/Css/bootstrap.css'
 import './Assets/Css/general.scss'
 import reportWebVitals from './reportWebVitals';
 import Header from './Layouts/Header/Header.js'
