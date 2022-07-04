@@ -1,6 +1,47 @@
 header {
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
 
+.navbar {
+  height:100%;
+  position: relative;
+
+  color: #000000;
+    font-family: "New-York", sans-serif;
+    font-size:20px;
+    
+  
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.12em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 !important;
+   
+    a {
+      color:#000000 !important;
+      padding: 30px 16px !important;
+      border-bottom: 2px solid rgba(255, 255, 255, 0);
+      &:hover {
+        color: #000000;
+        border-bottom: 2px solid #000000;
+        
+      }
+    
+    }
+    @media screen and (max-width: 1000px) {
+      .navbar-collapse{
+        top:50px;
+        right:0px;
+      position: absolute;
+      border:1px solid rgba(0,0,0,.1);
+      background-color: white;
+      
+    }
+
+
+    }
+}
 
 
   .header__right {
@@ -19,7 +60,7 @@ header {
       display: flex;
     }
   }
-
+/*
   @media (min-width: 768px) {
     .header__right {
       display: flex !important;
@@ -35,7 +76,7 @@ header {
     .header__navmobile {
       display: flex !important;
     }
-  }
+  }*/
 
   .img-logo {
     max-width: 395px;

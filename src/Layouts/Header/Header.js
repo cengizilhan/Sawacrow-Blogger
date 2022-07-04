@@ -12,10 +12,7 @@ import NavMenu from '../MobileMenu/NavMenu'
 
 
 export default function Header() {
-    useEffect(() => {
-  
 
-    });
   
 
   return (
@@ -30,25 +27,18 @@ export default function Header() {
                 
               
             </div>
-            <div className="col header__right ">
-                <ul className="menu__desktop">
-                    <li><a href="#/blog">BLOG</a></li>
-                    <li><a href="#/about">ABOUT</a></li>
-                    <li><a href="#/link">LINKS</a></li>
-                    <li><a href="#/pros">PROJECTS</a></li>
-                </ul>
-                      
-            
-           
-            </div>
-            <div className='col-auto header__navmobile '>
-            <NavMenu></NavMenu>
-            
+            <div className="col-auto header__right ">
+               
+            <NavMenu></NavMenu>   
+
             {
                 //<NavMenu></NavMenu>
             // burası ile ilgilenecek react responsive hata veriyor. 
             }
+            
+           
             </div>
+           
             <section>
       
         

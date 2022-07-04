@@ -1,34 +1,37 @@
-import { React, useState } from "react";
-import './NavMenu.scss';
-import Menubar from "react-responsive-multi-level-menu";
-// burası ile ilgilenecek react responsive hata veriyor.
-//const Menubar =require('react-responsive-multi-level-menu');
-
+import React from 'react'
+import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 
 export default function NavMenu() {
-  
-  const MenuItems = [
-    { value: "Blog", 
-      items: [
-              { value: "Men",
-                items: [{ value: "Shirts" }] 
-              }
-             ] 
-    },
-    { value: "About"},
-    { value: "Links"},
-    { value: "Projects", items: [] }
-  ];
-  const animation=['slideIn' , 'slideOut']
-
-
   return (
-    <section className="NavMenu">
-   <Menubar data={MenuItems} animation={animation} 
-   backgroundColor="#000000" 
-   className="menubar"/>
- 
-    </section>
     
-  );
+
+<Navbar  expand="lg">
+  
+    
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto">
+        <Nav.Link href="#home">BLOG</Nav.Link>
+        <Nav.Link href="#link">ABOUT</Nav.Link>
+        <Nav.Link href="#link">LINKS</Nav.Link>
+        <Nav.Link href="#link">PROJECTS</Nav.Link>
+        {
+          /*
+          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">LINKS</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+        </NavDropdown>
+           */
+        }
+        
+      </Nav>
+    </Navbar.Collapse>
+ 
+</Navbar>
+
+    
+  )
 }
