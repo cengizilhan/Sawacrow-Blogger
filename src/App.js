@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Layouts/Header/Header.js";
+import Index from "./Pages/Index";
+import Article from "./Pages/Article";
+import Footer from "./Layouts/Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./Assets/Css/bootstrap.css";
+import "./Assets/Css/general.scss";
 
 function App() {
   return (
-    <div className="App">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="article" element={<Article  />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

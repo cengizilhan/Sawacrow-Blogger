@@ -1,22 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import './Assets/Css/bootstrap.css'
-import './Assets/Css/general.scss'
-import reportWebVitals from './reportWebVitals';
-import Header from './Layouts/Header/Header.js'
-import ArticleList from './Pages/ArticleList';
-import Footer from './Layouts/Footer/Footer'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from './App'
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Header></Header>
-    <ArticleList></ArticleList>
-    <Footer></Footer>
-
-  </React.StrictMode>
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<React.StrictMode> <App></App></React.StrictMode>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
