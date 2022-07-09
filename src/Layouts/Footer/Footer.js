@@ -17,7 +17,7 @@ export default function Footer() {
 
        </div>
        <section className='footer__card'>
-        <img className='footer__card-img img-fluid' src={logo} alt="" />
+        <img width={290} height={27} className='footer__card-img img-fluid' src={logo} alt="" />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu velit tempus erat egestas efficitur. In hac habitasse platea dictumst. Fusce a nunc eget ligula suscipit finibus. </p>
        </section>
 
@@ -25,6 +25,10 @@ export default function Footer() {
         <a href="/#">Twitter</a>
         <a href="/#">Linkedin</a>
         <a href="/#">RSS</a>
+       </section>
+
+       <section className='footer__bottom-container'>
+       © 2012–2020 Nordic Rose Co. <br></br>All rights reserved. 
        </section>
     </footer>
   )

@@ -5,16 +5,23 @@ footer,
   padding-bottom: 35px;
   overflow: hidden;
 
-  &__links-container a {
-    font-family: "SF-Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 170%;
-    color: #ffffff;
-    /* or 27px */
+  &__links-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:35px;
+    a {
+      font-family: "SF-Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 170%;
+      color: #ffffff;
+      /* or 27px */
 
-    text-decoration-line: underline;
+      text-decoration-line: underline;
+    }
   }
   &__card {
     display: flex;
@@ -42,8 +49,13 @@ footer,
 
     text-align: center;
     max-width: 488px;
+    @media screen and (max-width: 768px) {
+    padding:0px 43px;
+    
+      
+    }
   }
-  .footer__textcontainer {
+  &__textcontainer {
     display: flex;
     justify-content: space-around;
 
@@ -53,6 +65,8 @@ footer,
       font-weight: 400;
       font-size: 20px;
       line-height: 28px;
+      min-width: fit-content;
+      margin:0px 25px;
       /* identical to box height, or 140% */
 
       letter-spacing: 0.1em;
@@ -62,6 +76,7 @@ footer,
     }
   }
   .marquee {
+    width: max-content;
     overflow: hidden;
     overflow-x: hidden;
     position: relative;
@@ -72,6 +87,17 @@ footer,
   .marquee:hover {
     animation-play-state: paused;
   }
+
+&__bottom-container {
+  color: #ffffff;
+  margin-top:64px;
+  font-family: 'SF-Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+text-align: center;
+}  
 
   /* Make it move */
   @keyframes scroll {

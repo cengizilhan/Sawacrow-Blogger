@@ -5,12 +5,6 @@ import './Header.scss'
 //import ScriptTag from 'react-script-tag';
 import NavMenu from '../MobileMenu/NavMenu'
 
-
-
-
-
-
-
 export default function Header() {
 
   
@@ -22,7 +16,7 @@ export default function Header() {
         <div className="row">
             <div className="col header__left d-center">
                 <a href="./">
-                <img src={logo} alt="logo" className='img-fluid img-logo' />
+                <img src={logo} width={290} height={27} alt="logo" className='img-fluid img-logo' />
                 </a>
                 
               
