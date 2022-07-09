@@ -1,25 +1,13 @@
 .NavMenu {
-  display: inline-flex;
+  display: flex;
 
-  .menu {
-    display: flex !important;
-    align-items: center;
-  }
-  .burger-menu {
-    //transform: scale(1.5);
-     width: 24px;
-    height:24px;
-     padding:0;
-    cursor: pointer;
-    visibility: hidden;
-    &:before {
-      visibility: visible;
-      display: block;
-      content: "";
-      background-image: url("../../Assets/Multimedia/hamburger.svg");
-      background-size: 24px 24px;
-      height: 24px;
-      width: 24px;
+  @media screen and (max-width: 1000px) {
+    .navbar-nav .nav-link {
+      padding: 0.5rem 1rem !important;
     }
+  }
+
+  .navbar-light .navbar-toggler {
+    border: none;
   }
 }

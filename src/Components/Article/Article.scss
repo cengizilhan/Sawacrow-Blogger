@@ -1,0 +1,20 @@
+.article__container {
+  img {
+    aspect-ratio: 304/176;
+    object-fit: cover;
+    width: 100%;
+  }
+  .article__container__text {
+    span {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 120%;
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin: 20px 0px;
+      padding: 0px 50px;
+    }
+  }
+}

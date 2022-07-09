@@ -5,11 +5,15 @@ import './Assets/Css/bootstrap.css'
 import './Assets/Css/general.scss'
 import reportWebVitals from './reportWebVitals';
 import Header from './Layouts/Header/Header.js'
+import ArticleList from './Pages/ArticleList';
+import Footer from './Layouts/Footer/Footer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header></Header>
+    <ArticleList></ArticleList>
+    <Footer></Footer>
 
   </React.StrictMode>
 );

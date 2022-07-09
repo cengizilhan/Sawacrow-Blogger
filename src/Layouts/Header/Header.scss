@@ -1,15 +1,18 @@
 header {
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
+  margin-bottom: 75px;
+  @media screen and (max-width: 800px) {
+    margin-bottom: 52px;
+  }
 
-.navbar {
-  height:100%;
-  position: relative;
+  .navbar {
+    height: 100%;
+    position: relative;
 
-  color: #000000;
+    color: #000000;
     font-family: "New-York", sans-serif;
-    font-size:20px;
-    
-  
+    font-size: 20px;
+
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -17,66 +20,43 @@ header {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     padding: 0 !important;
-   
+
     a {
-      color:#000000 !important;
+      color: #000000 !important;
       padding: 30px 16px !important;
       border-bottom: 2px solid rgba(255, 255, 255, 0);
       &:hover {
         color: #000000;
         border-bottom: 2px solid #000000;
-        
       }
-    
     }
     @media screen and (max-width: 1000px) {
-      .navbar-collapse{
-        top:50px;
-        right:0px;
-      position: absolute;
-      border:1px solid rgba(0,0,0,.1);
-      background-color: white;
-      
+      .navbar-collapse {
+        top: 50px;
+        right: 0px;
+        position: absolute;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: white;
+      }
     }
-
-
-    }
-}
-
-
-  .header__right {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
   }
-  .header__navmobile {
+
+  &__right {
+    display: flex;
+    //    align-items: flex-end;
+    //  justify-content: flex-end;
+  }
+  &__navmobile {
     display: flex;
   }
 
-  .header__left {
+  &__left {
     justify-content: flex-start;
     a {
       height: 100%;
       display: flex;
     }
   }
-/*
-  @media (min-width: 768px) {
-    .header__right {
-      display: flex !important;
-    }
-    .header__navmobile {
-      display: none !important;
-    }
-  }
-  @media (max-width: 768px) {
-    .header__right {
-      display: none !important;
-    }
-    .header__navmobile {
-      display: flex !important;
-    }
-  }*/
 
   .img-logo {
     max-width: 395px;
@@ -115,7 +95,7 @@ header {
       font-family: "New-York", sans-serif;
       &:hover {
         //border:none !important;
-        
+
         text-decoration: none;
       }
     }

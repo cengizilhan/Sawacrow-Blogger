@@ -1,9 +1,10 @@
 import React from 'react'
 import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
+import './NavMenu.scss'
 
 export default function NavMenu() {
   return (
-    
+    <div className='NavMenu'>
 
 <Navbar  expand="lg">
   
@@ -31,7 +32,7 @@ export default function NavMenu() {
     </Navbar.Collapse>
  
 </Navbar>
-
+</div>
     
   )
 }

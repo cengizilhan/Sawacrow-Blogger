@@ -1,0 +1,85 @@
+footer,
+.footer {
+  background-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  overflow: hidden;
+
+  &__links-container a {
+    font-family: "SF-Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: #ffffff;
+    /* or 27px */
+
+    text-decoration-line: underline;
+  }
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  &__card-img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(45deg)
+      brightness(104%) contrast(103%);
+    margin-top: 100px;
+    margin-bottom: 30px;
+    aspect-ratio: 290/27;
+    max-width: 290px;
+  }
+  p {
+    color: #ffffff;
+    font-family: "New-York";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    text-align: center;
+    max-width: 488px;
+  }
+  .footer__textcontainer {
+    display: flex;
+    justify-content: space-around;
+
+    span {
+      font-family: "SF-Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      /* identical to box height, or 140% */
+
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+  }
+  .marquee {
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+
+    animation: scroll 10s linear infinite;
+  }
+
+  .marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* Make it move */
+  @keyframes scroll {
+    0% {
+      left: 800px;
+    }
+    100% {
+      left: -800px;
+    }
+  }
+}
