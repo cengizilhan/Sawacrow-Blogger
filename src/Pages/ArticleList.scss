@@ -1,9 +1,11 @@
+@use '../Assets/Css/variable.scss' as device;
+
 .articleList {
   max-width: 854px;
   margin: 0 auto;
   margin-bottom: 100px;
   margin-top:70px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: device.$mobile) {
     margin-top: 50px;
   }
 
@@ -18,7 +20,7 @@
     text-align: center;
     font-family: "New-York", sans-serif;
     margin-bottom: 40px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: device.$mobile) {
       font-size: 32px;
       line-height: 38px;
     }
@@ -31,7 +33,7 @@
     grid-column-gap: 28px;
     grid-row-gap: 64px;
     grid-area: 1 / 2 / 2 / 3;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: device.$mobile) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(1, 1fr);
       grid-column-gap: 0;

@@ -10,6 +10,7 @@ Olacaklar:
 -redux-thunk-asynch
 -dark theme
 
+-ortak değişken verikcek mobile-desktop
 
 
 
