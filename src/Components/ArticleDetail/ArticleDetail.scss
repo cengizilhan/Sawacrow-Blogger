@@ -112,4 +112,23 @@ border-radius: 4px;
       aspect-ratio: 2/2;
     }
   }
+  &__content-wrapper > :is(*):not(img){
+    max-width: 640px !important;
+   margin-left:auto;
+   margin-right: auto;
+   font-family: 'New-York';
+font-style: normal;
+color: #000000;
+font-weight: 500;
+font-size: 20px;
+line-height: 170%;
+  }
+  &__content-wrapper > img {
+ margin:2rem auto;
+ margin:0 auto;
+ display: block;
+ max-width: 854px;
+ width:100%;
+  }
+
 }
