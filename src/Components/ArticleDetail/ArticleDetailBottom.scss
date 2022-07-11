@@ -1,9 +1,26 @@
 @use "../../Assets/Css/variable.scss" as device;
 .articleDetailBottom {
-    &__Hrdottet {
-        border-top: 1px dashed #000000;
-        margin-bottom: 25px;
+  &__eyeLine {
+    border-top: 2px solid #000000;
+
+    position: relative;
+    margin-top: 90px +30px;
+    margin-bottom: 50px+30px;
+    div {
+      width: 100%;
+
+      height: auto;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -33px;
     }
+  }
+  &__Hrdottet {
+    border-top: 1px dashed #000000;
+    margin-bottom: 25px;
+  }
   &__thirdRow {
     p {
       font-style: normal;
@@ -14,7 +31,7 @@
       margin-bottom: 0;
 
       letter-spacing: 0.05em;
-   
+
       color: #000000;
     }
 
