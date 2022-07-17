@@ -1,44 +1,41 @@
+@font-face {
+  font-family: "New-York";
+  src: url(../Fonts/NewYorkExtraLargeMedium.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-    font-family: 'New-York';
-    src: url(../Fonts/NewYorkExtraLargeMedium.ttf) format('truetype');
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: "SF-Mono";
+  src: url(../Fonts/SFMono-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
 
-  @font-face {
-    font-family: 'SF-Mono';
-    src: url(../Fonts/SFMono-Medium.ttf) format('truetype');
-    font-style: normal;
-    font-display: swap;
-  }
-
-  
-  @font-face {
-    font-family: 'SF-Pro';
-    src: url(../Fonts/SFProDisplay-Regular.ttf) format('truetype');
-    font-style: normal;
-    font-display: swap;
-    
-  }
+@font-face {
+  font-family: "SF-Pro";
+  src: url(../Fonts/SFProDisplay-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
-
-    font-family: 'SF-Pro', sans-serif;
-    margin: 0 auto;
+  font-family: "SF-Pro", sans-serif;
+  margin: 0 auto;
 }
 .container {
-    max-width: 1400px;
+  max-width: 1400px;
+  @media screen and (max-width: 768px) {
+    padding: 0px 20px !important;
+  }
 }
-a{
-    text-decoration: none;
-    
+a {
+  text-decoration: none;
 }
 
 .d-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }

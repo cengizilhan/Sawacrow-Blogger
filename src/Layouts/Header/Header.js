@@ -14,7 +14,7 @@ export default function Header() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <div className="container">
         <div className="row">
-            <div className="col header__left d-center">
+            <div className="col header__left">
                 <a href="./">
                 <img src={logo} width={290} height={27} alt="logo" className='img-fluid img-logo' />
                 </a>

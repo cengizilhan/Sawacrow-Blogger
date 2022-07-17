@@ -12,7 +12,9 @@ export default function ArticleHero() {
         <h1>A few words about this blog platform, Ghost, and how this site was made</h1>
         <p>Why Ghost (& Figma) instead of Medium, WordPress or other options?</p>
         </div>
+        <div>
         <div className='hr-line mx-0 mx-sm-5'></div>
+        </div>
         </a>
         </section>
         

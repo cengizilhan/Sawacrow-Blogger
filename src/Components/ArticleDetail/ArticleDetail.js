@@ -4,6 +4,7 @@ import heroImg from "../../Assets/Multimedia/article-hero.jpg";
 import twitterIcon from "../../Assets/Multimedia/twitter.svg";
 import facebookIcon from "../../Assets/Multimedia/facebook.svg";
 import ArticleDetailBottom from "./ArticleDetailBottom";
+import ArticleDetailBlogs from "./ArticleDetailBlogs";
 
 export default function ArticleDetail() {
   return (
@@ -72,6 +73,12 @@ export default function ArticleDetail() {
       </section>
 <section className="articleDetail__wrapper container">
 <ArticleDetailBottom></ArticleDetailBottom>
+</section>
+
+<section className='articleDetailBlogs articleDetail__wrapper container'>
+  <ArticleDetailBlogs></ArticleDetailBlogs>
+
+    
 </section>
       
     </section>

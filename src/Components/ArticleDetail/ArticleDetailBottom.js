@@ -41,10 +41,7 @@ export default function ArticleDetailBottom() {
     
 </section>
 
-<section className='articleDetailBlogs'>
 
-    
-</section>
 
 
 

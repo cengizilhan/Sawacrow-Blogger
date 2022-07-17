@@ -53,12 +53,17 @@ header,
   }
 
   &__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     justify-content: flex-start;
-    a {
-      height: 100%;
-      display: flex;
-    }
+    @media screen and (max-width: device.$mobile) {
+    justify-content: flex-start;
+    padding: 0px !important;
   }
+
+    }
 
   .img-logo {
     max-width: 395px;
