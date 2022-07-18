@@ -1,10 +1,9 @@
-@use '../../Assets/Css/variable.scss' as device;
+@use "../../Assets/Css/variable.scss" as device;
 header,
 .header {
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
-  
-  @media screen and (max-width:device.$mobile) {
-  
+
+  @media screen and (max-width: device.$mobile) {
   }
 
   .navbar {
@@ -59,11 +58,10 @@ header,
 
     justify-content: flex-start;
     @media screen and (max-width: device.$mobile) {
-    justify-content: flex-start;
-    padding: 0px !important;
-  }
-
+      justify-content: flex-start;
+      padding: 0px !important;
     }
+  }
 
   .img-logo {
     max-width: 395px;
