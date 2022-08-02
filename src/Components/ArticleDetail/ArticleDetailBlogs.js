@@ -1,6 +1,6 @@
 import React from 'react'
 import ArticleDetailPost from './ArticleDetailPost'
-import './/ArticleDetailBlogs.scss'
+import './ArticleDetailBlogs.scss'
 
 export default function ArticleDetailBlogs() {
   return (
