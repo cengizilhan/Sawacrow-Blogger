@@ -28,6 +28,7 @@ export default function Article(props) {
     <section className='article__container'>
       <a href="/#">
 
+{console.log(props)}
         
         <div className='article__container__image'>
             <img className='img-fluid' width="401" height="232" alt="bla bla"

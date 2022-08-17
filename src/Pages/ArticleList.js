@@ -12,7 +12,8 @@ export default function ArticleList() {
     axios.get('https://dummyblog.cengizilhan.com/wp-json/wp/v2/posts')
     .then(function (response) {
       // handle success
-      console.log(response);
+      
+      console.warn(response);
       setpostList(response.data);
     })
     .catch(function (error) {

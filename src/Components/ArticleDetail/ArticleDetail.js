@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect, useState }from "react";
 import "./ArticleDetail.scss";
 import heroImg from "../../Assets/Multimedia/article-hero.jpg";
 import twitterIcon from "../../Assets/Multimedia/twitter.svg";
@@ -6,9 +6,77 @@ import facebookIcon from "../../Assets/Multimedia/facebook.svg";
 import ArticleDetailBottom from "./ArticleDetailBottom";
 import ArticleDetailBlogs from "./ArticleDetailBlogs";
 
-export default function ArticleDetail() {
+import axios from "axios";
+
+export default function ArticleDetail(props) {
+  const [imgUrl, setimgUrl] = useState([])
+  const [post, setpost] = useState([])
+
+// axios bu sayfada çalışmmıyor.
+//çağrılan article js çalışmadığı zaman props'a data dolmuyor. dolayısıyla direk burası açılınca veri hiç gelmiyor aq normal.
+  useEffect(() => {
+    
+console.warn("img g", props)
+
+
+    axios.get(`https://dummyblog.cengizilhan.com/wp-json/wp/v2/media/${props.post.featured_media}`)
+    .then(function (response) { // handle success
+    console.log(response.data.media_details.sizes.full.source_url);
+    setimgUrl(response.data.media_details.sizes.full.source_url);
+
+    console.warn ("rapid1")
+    console.warn(imgUrl)
+    setpost({
+      content: props.post.content.rendered,
+     date: props.post.date,
+     date_modified: props.post.modified,
+     title:props.post.title.rendered,
+     tags: props.post.tags,
+     img:imgUrl
+     /*
+     başlık
+     alt başlık
+     resim
+     author
+     tags
+     author açıklama */
+   });
+   console.warn ("rapid")
+   console.warn(post)
+    
+    
+  });
+  
+
+  }, [])
+
+  //let { post } = props.post;
+  console.log("test");
+  console.log(props.post);
+  /*
+  const data = {
+    content: props.post.content.rendered,
+    date: props.post.date,
+    date_modified: props.post.modified,
+    title:props.post.title.rendered,
+    tags: props.post.tags,
+    img:imgUrl
+   
+    başlık
+    alt başlık
+    resim
+    author
+    tags
+    author açıklama 
+  } */
+  //console.warn(props.post.content.rendered)
+
+
+
   return (
     <section className="articleDetail">
+      <h2>article detail js___ </h2>
+      { /*<div dangerouslySetInnerHTML={{__html: props.post.content.rendered}}></div> */}
       <h1>
         A few words about this blog platform, Ghost, and how this site was made
       </h1>
@@ -51,24 +119,10 @@ export default function ArticleDetail() {
       </section>
  
       <section className="articleDetail__content-wrapper container">
-        <h2>asdasdasd</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-          perferendis numquam iusto, libero mollitia aliquid et architecto
-          molestias quasi nam non corporis, veritatis aspernatur obcaecati sint
-          praesentium, magni molestiae eligendi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Reprehenderit, dolor eveniet! Explicabo et sed rem iste ad ut ab natus
-          cupiditate? Ipsum eligendi animi assumenda accusamus nobis architecto
-          vitae saepe.
-        </p>
-        <img className="img-fluid" src="https://images.unsplash.com/photo-1657564793579-9d49d4d7257b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
-        <ul>
-          <li>list1</li>
-          <li>list2</li>
-        </ul>
+        
+        
+      
+      
       
       </section>
 <section className="articleDetail__wrapper container">
