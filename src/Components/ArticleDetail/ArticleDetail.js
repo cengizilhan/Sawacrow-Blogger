@@ -1,4 +1,5 @@
 import {React, useEffect, useState }from "react";
+import { useParams } from 'react-router-dom';
 import "./ArticleDetail.scss";
 import heroImg from "../../Assets/Multimedia/article-hero.jpg";
 import twitterIcon from "../../Assets/Multimedia/twitter.svg";
@@ -9,82 +10,96 @@ import ArticleDetailBlogs from "./ArticleDetailBlogs";
 import axios from "axios";
 
 export default function ArticleDetail(props) {
+  const articleid= useParams();
+
   const [imgUrl, setimgUrl] = useState([])
   const [post, setpost] = useState([])
+  const [author, setauthor] = useState([])
+
+
+  
+
 
 // axios bu sayfada çalışmmıyor.
 //çağrılan article js çalışmadığı zaman props'a data dolmuyor. dolayısıyla direk burası açılınca veri hiç gelmiyor aq normal.
   useEffect(() => {
+
+
     
-console.warn("img g", props)
 
 
-    axios.get(`https://dummyblog.cengizilhan.com/wp-json/wp/v2/media/${props.post.featured_media}`)
-    .then(function (response) { // handle success
-    console.log(response.data.media_details.sizes.full.source_url);
-    setimgUrl(response.data.media_details.sizes.full.source_url);
-
-    console.warn ("rapid1")
-    console.warn(imgUrl)
+    axios.get('https://dummyblog.cengizilhan.com/wp-json/wp/v2/posts/'+articleid.articleid)
+    .then(function (response) {
+      // handle success
+      console.log(response);
+    //  setpost(response.data);
     setpost({
-      content: props.post.content.rendered,
-     date: props.post.date,
-     date_modified: props.post.modified,
-     title:props.post.title.rendered,
-     tags: props.post.tags,
-     img:imgUrl
+      content: response.data.content.rendered,
+     date: response.data.date,
+     date_modified: response.data.modified,
+     title:response.data.title.rendered,
+     subtitle:response.data.excerpt.rendered,
+     tags: response.data.tags,
+     img:imgUrl,
+     userId:response.data.author
      /*
-     başlık
      alt başlık
-     resim
+     
      author
      tags
      author açıklama */
+
+     
    });
-   console.warn ("rapid")
-   console.warn(post)
+   // Fetch img url from another endpoint    
+   axios.get(`https://dummyblog.cengizilhan.com/wp-json/wp/v2/media/${response.data.featured_media}`)
+   .then(function (response) { // handle success
+   setimgUrl(response.data.media_details.sizes.full.source_url);
+});
+
+axios.get(`https://dummyblog.cengizilhan.com/wp-json/wp/v2/users/${response.data.author}`)
+.then(function (response) { // handle success
+//setauthor(response);
+console.warn('author',response);
+setauthor({
+  name:response.data.slug,
+  img:response.data.avatar_urls[96],
+  description:response.data.description
+})
+});
+
+
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .then(function () {
+      // always executed
+    }) 
+ 
     
-    
-  });
+
+
   
 
   }, [])
 
-  //let { post } = props.post;
-  console.log("test");
-  console.log(props.post);
-  /*
-  const data = {
-    content: props.post.content.rendered,
-    date: props.post.date,
-    date_modified: props.post.modified,
-    title:props.post.title.rendered,
-    tags: props.post.tags,
-    img:imgUrl
-   
-    başlık
-    alt başlık
-    resim
-    author
-    tags
-    author açıklama 
-  } */
-  //console.warn(props.post.content.rendered)
-
+ 
 
 
   return (
     <section className="articleDetail">
-      <h2>article detail js___ </h2>
-      { /*<div dangerouslySetInnerHTML={{__html: props.post.content.rendered}}></div> */}
+      
       <h1>
-        A few words about this blog platform, Ghost, and how this site was made
+      
+      <span dangerouslySetInnerHTML={{__html: post.title}}></span> 
       </h1>
       <span className="articleDetail__subheader">
-        Why Ghost (& Figma) instead of Medium, WordPress or other options?
+        
       </span>
       <img
-        src={heroImg}
+        src={imgUrl}
         className="articleDetail__heroimg"
         alt="herobanner"
       ></img>
@@ -93,13 +108,13 @@ console.warn("img g", props)
         <section className="articleDetail__author-container">
           <div className="articleDetail__author-left">
             <img
-              src="https://images.unsplash.com/photo-1657491784312-cf194c7d08fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              src={author.img}
               className="img-fluid"
               alt="author"
             ></img>
             <div>
               {" "}
-              <span>Mika Matikainen</span>
+              <span>{author.name}</span>
               <span>Apr 15, 2020 · 4 min read</span>
             </div>
           </div>
@@ -120,13 +135,13 @@ console.warn("img g", props)
  
       <section className="articleDetail__content-wrapper container">
         
-        
+       { <div dangerouslySetInnerHTML={{__html: post.content}}></div> }
       
       
       
       </section>
 <section className="articleDetail__wrapper container">
-<ArticleDetailBottom></ArticleDetailBottom>
+<ArticleDetailBottom author={author}></ArticleDetailBottom >
 </section>
 
 <section className='articleDetailBlogs articleDetail__wrapper container'>
