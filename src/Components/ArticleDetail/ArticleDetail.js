@@ -35,13 +35,14 @@ export default function ArticleDetail(props) {
     //  setpost(response.data);
     setpost({
       content: response.data.content.rendered,
-     date: response.data.date,
-     date_modified: response.data.modified,
+     date: new Date(response.data.date).toLocaleDateString("en-US") ,
+     date_modified: new Date(response.data.modified).toLocaleDateString("en-US"),
      title:response.data.title.rendered,
      subtitle:response.data.excerpt.rendered,
      tags: response.data.tags,
      img:imgUrl,
-     userId:response.data.author
+     userId:response.data.author,
+     tags:response.data.tags,
      /*
      alt başlık
      
@@ -115,7 +116,8 @@ setauthor({
             <div>
               {" "}
               <span>{author.name}</span>
-              <span>Apr 15, 2020 · 4 min read</span>
+              
+              <span dangerouslySetInnerHTML={{__html: post.date}}></span>
             </div>
           </div>
           <div className="articleDetail__author-right">
@@ -134,6 +136,7 @@ setauthor({
       </section>
  
       <section className="articleDetail__content-wrapper container">
+      
         
        { <div dangerouslySetInnerHTML={{__html: post.content}}></div> }
       

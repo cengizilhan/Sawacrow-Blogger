@@ -22,10 +22,13 @@ export default function ArticleDetailBottom(author) {
         </a>
     
 </section>
-<section className='articleDetailBottom__secondRow'>
+<section className='articleDetailBottom__secondRow '>
+    <div className='d-none'>
     <span>Tags:</span>
+
     <a href="/#">sss</a>
     <a href="/#">sss</a>
+    </div>
 </section>
 <div className='articleDetailBottom__Hrdottet'></div>
 <section className='articleDetailBottom__thirdRow'>
