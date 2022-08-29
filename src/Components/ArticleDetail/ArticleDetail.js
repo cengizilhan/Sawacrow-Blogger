@@ -100,7 +100,7 @@ setauthor({
         
       </span>
       <img
-        src={imgUrl}
+        src={imgUrl} loading="lazy"
         className="articleDetail__heroimg"
         alt="herobanner"
       ></img>
