@@ -3,7 +3,7 @@ Article detail tamam gibi.
 örnek:
 http://localhost:3000/1001
 son rütujlar yapılacak.
-
+https://developer.yoast.com/customization/apis/rest-api/ yoast seo api eklenecek. metalar falan.
 anasayfa ayarlanacak.
 
 
@@ -25,3 +25,7 @@ Olacaklar:
 
 Firebase Authen..  (authen.. eticaret projesinde olcak)
 
+
+
+Buglar:
+1-Article detail'de img first load'da broken img iconu görünüyor..

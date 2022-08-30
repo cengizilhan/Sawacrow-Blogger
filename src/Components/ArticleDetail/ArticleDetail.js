@@ -1,123 +1,147 @@
-import {React, useEffect, useState }from "react";
-import { useParams } from 'react-router-dom';
+import { React, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./ArticleDetail.scss";
-import heroImg from "../../Assets/Multimedia/article-hero.jpg";
+//import heroImg from "../../Assets/Multimedia/article-hero.jpg"; 
 import twitterIcon from "../../Assets/Multimedia/twitter.svg";
 import facebookIcon from "../../Assets/Multimedia/facebook.svg";
 import ArticleDetailBottom from "./ArticleDetailBottom";
 import ArticleDetailBlogs from "./ArticleDetailBlogs";
+import { Helmet } from "react-helmet";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import PlaceholderSvg from '../../Assets/Multimedia/placeholder.svg';
+
 
 import axios from "axios";
 
 export default function ArticleDetail(props) {
-  const articleid= useParams();
+  const articleid = useParams();
 
-  const [imgUrl, setimgUrl] = useState([])
-  const [post, setpost] = useState([])
-  const [author, setauthor] = useState([])
-
-
-  
+  const [imgUrl, setimgUrl] = useState([]);
+  const [post, setpost] = useState([]);
+  const [author, setauthor] = useState([]);
 
 
-// axios bu sayfada çalışmmıyor.
-//çağrılan article js çalışmadığı zaman props'a data dolmuyor. dolayısıyla direk burası açılınca veri hiç gelmiyor aq normal.
   useEffect(() => {
-
-
-    
-
-
-    axios.get('https://dummyblog.cengizilhan.com/wp-json/wp/v2/posts/'+articleid.articleid)
-    .then(function (response) {
-      // handle success
-      console.log(response);
-    //  setpost(response.data);
-    setpost({
-      content: response.data.content.rendered,
-     date: new Date(response.data.date).toLocaleDateString("en-US") ,
-     date_modified: new Date(response.data.modified).toLocaleDateString("en-US"),
-     title:response.data.title.rendered,
-     subtitle:response.data.excerpt.rendered,
-     tags: response.data.tags,
-     img:imgUrl,
-     userId:response.data.author,
-     tags:response.data.tags,
-     /*
+    axios
+      .get(
+        "https://dummyblog.cengizilhan.com/wp-json/wp/v2/posts/" +
+          articleid.articleid
+      )
+      .then(function (response) {
+        // handle success
+        console.log(response);
+        //  setpost(response.data);
+        setpost({
+          content: response.data.content.rendered,
+          date: new Date(response.data.date).toLocaleDateString("en-US"),
+          date_modified: new Date(response.data.modified).toLocaleDateString(
+            "en-US"
+          ),
+          title: response.data.title.rendered,
+          subtitle: response.data.excerpt.rendered,
+          tags: response.data.tags,
+          img: imgUrl,
+          userId: response.data.author,
+          tags: response.data.tags,
+          meta: {
+            title: response.data.yoast_head_json.title,
+            description: response.data.yoast_head_json.og_description,
+            canonical: response.data.yoast_head_json.canonical,
+          },
+          /*
      alt başlık
      
      author
      tags
      author açıklama */
+        });
+        // Fetch img url from another endpoint
+        axios.get(
+            `https://dummyblog.cengizilhan.com/wp-json/wp/v2/media/${response.data.featured_media}`
+          )
+          .then(function (response) {
+            // handle success
+            setimgUrl(response.data.media_details.sizes.full.source_url);
+          });
 
-     
-   });
-   // Fetch img url from another endpoint    
-   axios.get(`https://dummyblog.cengizilhan.com/wp-json/wp/v2/media/${response.data.featured_media}`)
-   .then(function (response) { // handle success
-   setimgUrl(response.data.media_details.sizes.full.source_url);
-});
-
-axios.get(`https://dummyblog.cengizilhan.com/wp-json/wp/v2/users/${response.data.author}`)
-.then(function (response) { // handle success
-//setauthor(response);
-console.warn('author',response);
-setauthor({
-  name:response.data.slug,
-  img:response.data.avatar_urls[96],
-  description:response.data.description
-})
-});
-
-
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    })
-    .then(function () {
-      // always executed
-    }) 
- 
-    
-
-
-  
-
-  }, [])
-
- 
-
+        axios
+          .get(
+            `https://dummyblog.cengizilhan.com/wp-json/wp/v2/users/${response.data.author}`
+          )
+          .then(function (response) {
+            // handle success
+            //setauthor(response);
+            console.warn("author", response);
+            setauthor({
+              name: response.data.slug,
+              img: response.data.avatar_urls[96],
+              description: response.data.description,
+            });
+          });
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+  }, []);
 
   return (
     <section className="articleDetail">
-      
+    
+    {
+    console.log("TİTLE", post.meta?.title)
+    }
+      <Helmet>
+        <title>{post.meta?.title}</title>
+        <meta name="description" content={post.meta?.description} />
+        <link rel="canonical" href={post.meta?.canonical} />
+      </Helmet>
       <h1>
-      
-      <span dangerouslySetInnerHTML={{__html: post.title}}></span> 
+        <span dangerouslySetInnerHTML={{ __html: post.title }}></span>
       </h1>
-      <span className="articleDetail__subheader">
+      <span className="articleDetail__subheader"></span>
+     <img src="asdasdasdasd.jpg" alt="" />
+      <LazyLoadImage  wrapperClassName="mx-auto d-block"
+              alt="herobanner" 
+              placeholderSrc={PlaceholderSvg}
+              
+              width = {400}
+              height = {400}
+              
+              className="articleDetail__heroimg mx-auto"
+              src={imgUrl}
+              
+           
+              
+        />
         
-      </span>
-      <img
-        src={imgUrl} loading="lazy"
-        className="articleDetail__heroimg"
-        alt="herobanner"
-      ></img>
+
       <section className="articleDetail__wrapper container">
         <div className="articleDetail__hr"></div>
         <section className="articleDetail__author-container">
           <div className="articleDetail__author-left">
-            <img
-              src={author.img}
+          <LazyLoadImage  wrapperClassName="mx-auto d-block"
+              alt="author" 
+              placeholderSrc={PlaceholderSvg}
+              
+              width = {57}
+              height = {57}
+              
               className="img-fluid"
-              alt="author"
-            ></img>
+              src={author.img}
+              
+           
+              
+        />
+            
+            
             <div>
               {" "}
               <span>{author.name}</span>
-              
-              <span dangerouslySetInnerHTML={{__html: post.date}}></span>
+              <span dangerouslySetInnerHTML={{ __html: post.date }}></span>
             </div>
           </div>
           <div className="articleDetail__author-right">
@@ -134,25 +158,29 @@ setauthor({
           </div>
         </section>
       </section>
- 
-      <section className="articleDetail__content-wrapper container">
-      
+
+      <section className="articleDetail__content-wrapper container  placeholder-glow">
+        <section className={ post.content?'d-none':false } >
+        <span className="placeholder w-75"></span>
+        <span className="placeholder w-100"></span>
+        <span className="placeholder w-100"></span>
+        <span className="placeholder w-100"></span>
+        <span className="placeholder w-100"></span>
+        <span className="placeholder w-100"></span>
+        <span className="placeholder w-100"></span>
+        <span className="placeholder w-75"></span>
+        <span className="placeholder w-50"></span>
+        </section>
+        {<div dangerouslySetInnerHTML={{ __html: post.content?post.content:''}}></div>}
         
-       { <div dangerouslySetInnerHTML={{__html: post.content}}></div> }
-      
-      
-      
       </section>
-<section className="articleDetail__wrapper container">
-<ArticleDetailBottom author={author}></ArticleDetailBottom >
-</section>
+      <section className="articleDetail__wrapper container">
+        <ArticleDetailBottom author={author}></ArticleDetailBottom>
+      </section>
 
-<section className='articleDetailBlogs articleDetail__wrapper container'>
-  <ArticleDetailBlogs></ArticleDetailBlogs>
-
-    
-</section>
-      
+      <section className="articleDetailBlogs articleDetail__wrapper container">
+        <ArticleDetailBlogs></ArticleDetailBlogs>
+      </section>
     </section>
   );
 }
