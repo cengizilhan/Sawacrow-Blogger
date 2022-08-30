@@ -103,7 +103,12 @@ export default function ArticleDetail(props) {
           imgUrl.imgurl && <link rel="preload" href={imgUrl.imgurl} as="image" />
         }
       </Helmet>
-      <h1 className="d-none">
+      <h1 className="placeholder-glow">
+        <section className={post.title?'d-none':false}>
+        <span className="placeholder w-100"></span>
+        <span className="placeholder w-100"></span>
+        </section>
+        
         <span dangerouslySetInnerHTML={{ __html: post.title }}></span>
       </h1>
       <span className="articleDetail__subheader"></span>
