@@ -41,7 +41,7 @@ export default function ArticleDetailBottom(author) {
 
 <section className='articleDetailBottom__eyeLine'>
     <div>
-    <img src={eyesIcon} alt="" />
+    <img width={82} height={65} src={eyesIcon} alt="" />
     </div>
     
 </section>

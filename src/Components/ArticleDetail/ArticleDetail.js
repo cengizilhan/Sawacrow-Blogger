@@ -61,7 +61,7 @@ export default function ArticleDetail(props) {
           )
           .then(function (response) {
             // handle success
-            setimgUrl(response.data.media_details.sizes.full.source_url);
+            setimgUrl({imgurl:response.data.media_details.sizes.full.source_url});
           });
 
         axios
@@ -98,12 +98,17 @@ export default function ArticleDetail(props) {
         <title>{post.meta?.title}</title>
         <meta name="description" content={post.meta?.description} />
         <link rel="canonical" href={post.meta?.canonical} />
+        
+        {
+          imgUrl.imgurl && <link rel="preload" href={imgUrl.imgurl} as="image" />
+        }
       </Helmet>
       <h1 className="d-none">
         <span dangerouslySetInnerHTML={{ __html: post.title }}></span>
       </h1>
       <span className="articleDetail__subheader"></span>
-     <img src="asdasdasdasd.jpg" alt="" />
+   
+    
       <LazyLoadImage  wrapperClassName="mx-auto d-block"
               alt="herobanner" 
               placeholderSrc={PlaceholderSvg}
@@ -112,7 +117,7 @@ export default function ArticleDetail(props) {
               height = {400}
               
               className="articleDetail__heroimg mx-auto"
-              src={imgUrl}
+              src={ imgUrl.imgurl}
               
            
               
