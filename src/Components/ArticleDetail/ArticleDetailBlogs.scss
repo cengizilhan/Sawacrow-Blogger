@@ -1,5 +1,7 @@
 @use '../../Assets/Css/variable.scss' as device;
+
 .ArticleDetailBlogs {
+    margin-bottom:110px;
     &__title{
         font-family: 'New-York';
         font-style: normal;

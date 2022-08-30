@@ -30,7 +30,9 @@ export default function Article() {
   return (
     <section>
       <Header></Header>
-      <h1>article js</h1>
+      
+      {/* article js */}
+      
      
       <ArticleDetail post={post} ></ArticleDetail>
 
