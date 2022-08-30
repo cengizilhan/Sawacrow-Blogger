@@ -99,7 +99,7 @@ export default function ArticleDetail(props) {
         <meta name="description" content={post.meta?.description} />
         <link rel="canonical" href={post.meta?.canonical} />
       </Helmet>
-      <h1>
+      <h1 className="d-none">
         <span dangerouslySetInnerHTML={{ __html: post.title }}></span>
       </h1>
       <span className="articleDetail__subheader"></span>
