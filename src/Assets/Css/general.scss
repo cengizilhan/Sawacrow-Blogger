@@ -39,3 +39,29 @@ a {
   align-items: center;
   align-content: center;
 }
+/*
+img {
+  position: relative;
+
+}
+
+  img::before {
+      content: 'img load err';
+      position: absolute;
+      font-size:13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      space-between: center;
+      padding:1rem;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border:1px solid rgba(80, 77, 77, 0.541);
+      color:rgba(80, 77, 77, 0.541);
+      text-align: center;
+      width: 50px;
+      height: 50px;
+  }
+*/
