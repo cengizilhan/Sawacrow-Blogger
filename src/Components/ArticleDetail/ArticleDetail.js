@@ -155,12 +155,12 @@ export default function ArticleDetail(props) {
             </div>
           </div>
           <div className="articleDetail__author-right">
-            <a href="/#">
+            <a target="_blank" href={'https://twitter.com/intent/tweet?url='+window.location.href}>
               <div>
                 <img src={twitterIcon} alt="" />
               </div>
             </a>
-            <a href="/##">
+            <a target="_blank" href={'http://www.facebook.com/share.php?u='+window.location.href}>
               <div>
                 <img src={facebookIcon} alt="" />
               </div>

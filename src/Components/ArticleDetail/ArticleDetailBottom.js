@@ -10,12 +10,12 @@ export default function ArticleDetailBottom(author) {
         <span className='d-block d-sm-none articleDetailBottom__share'>Share:</span>
 <section className='articleDetailBottom__firstRow'>
     
-    <a href="/#">
+    <a target="_blank" href={'http://www.facebook.com/share.php?u='+window.location.href}>
         <img src={facebookIcon} alt="" />
         
         <span>Share on Facebook</span>
         </a>
-    <a href="/#">
+    <a target="_blank" href={'https://twitter.com/intent/tweet?url='+window.location.href}>
         <img src={twitterIcon} alt="" />
         
         <span>Share on Twitter</span>
