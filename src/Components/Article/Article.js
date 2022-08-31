@@ -26,7 +26,7 @@ export default function Article(props) {
 
   return (
     <section className='article__container'>
-      <a href="/#">
+      <a href={'./'+props.id}>
 
 {console.log(props)}
         
