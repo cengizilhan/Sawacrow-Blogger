@@ -34,7 +34,8 @@ export default function ArticleDetailBottom(author) {
 <section className='articleDetailBottom__thirdRow'>
     <img src={author.author.img} 
     alt="" />
-    {console.warn("descrip",author.author)}
+    {//console.warn("descrip",author.author)
+    }
     <p dangerouslySetInnerHTML={{__html: author.author.description===""?'This user will fill his description.':author.author.description}}></p>
     
 </section>

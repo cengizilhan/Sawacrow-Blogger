@@ -29,7 +29,7 @@ export default function ArticleDetail(props) {
       )
       .then(function (response) {
         // handle success
-        console.log(response);
+        //console.log(response);
         //  setpost(response.data);
         setpost({
           content: response.data.content.rendered,
@@ -71,7 +71,7 @@ export default function ArticleDetail(props) {
           .then(function (response) {
             // handle success
             //setauthor(response);
-            console.warn("author", response);
+            //console.warn("author", response);
             setauthor({
               name: response.data.slug,
               img: response.data.avatar_urls[96],
@@ -81,7 +81,7 @@ export default function ArticleDetail(props) {
       })
       .catch(function (error) {
         // handle error
-        console.log(error);
+        //console.log(error);
       })
       .then(function () {
         // always executed
@@ -92,7 +92,7 @@ export default function ArticleDetail(props) {
     <section className="articleDetail">
     
     {
-    console.log("TİTLE", post.meta?.title)
+    //console.log("TİTLE", post.meta?.title)
     }
       <Helmet>
         <title>{post.meta?.title}</title>

@@ -5,7 +5,7 @@ import PlaceholderSvg from '../../Assets/Multimedia/placeholder.svg';
 
 export default function ArticleDetailPost() {
   return (
-    <a  href="/#" className='articleDetailPost'>
+    <a  href="/#" className='articleDetailPost '>
         
             
       <LazyLoadImage  wrapperClassName=""
