@@ -137,3 +137,14 @@ line-height: 170%;
   }
 
 }
+
+
+
+.lazy-load-image-background:not(.lazy-load-image-loaded){
+  display: inline-block;
+    min-height: 1em;
+    vertical-align: middle;
+    cursor: wait;
+    background-color:  #bababa;
+    opacity: .5;
+}

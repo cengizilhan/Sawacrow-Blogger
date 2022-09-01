@@ -114,14 +114,14 @@ export default function ArticleDetail(props) {
       <span className="articleDetail__subheader"></span>
    
     
-      <LazyLoadImage  wrapperClassName="mx-auto d-block"
+      <LazyLoadImage  wrapperClassName=" mx-auto d-block"
               alt="herobanner" 
               placeholderSrc={PlaceholderSvg}
               
               width = {400}
               height = {400}
               
-              className="articleDetail__heroimg mx-auto"
+              className={imgUrl.imgurl?true:" placeholder "+" articleDetail__heroimg mx-auto"}
               src={ imgUrl.imgurl}
               
            
