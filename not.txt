@@ -1,3 +1,5 @@
+https://github.com/KunalN25/simple-react-pagination/blob/main/src/App.jsx
+
 Son durum:
 Article detail tamam gibi.
 örnek:
@@ -5,7 +7,16 @@ http://localhost:3000/1001
 son rütujlar yapılacak.
 https://developer.yoast.com/customization/apis/rest-api/ yoast seo api eklenecek. metalar falan.
 anasayfa ayarlanacak.
+pagination
+https://developer.wordpress.org/rest-api/using-the-rest-api/pagination/#pagination-parameters
+https://stackoverflow.com/questions/35728943/wordpress-rest-api-v2-return-all-posts
+https://dummyblog.cengizilhan.com/wp-json/wp/v2/posts?per_page=100
 
+
+kalanlar:
+Anasayfa Skeleton
+anasayfa listing skeleton
+pagination
 
 React js - Bootstrap.css -scss
 Wordpress Headless API'den postlar çekilecek.
