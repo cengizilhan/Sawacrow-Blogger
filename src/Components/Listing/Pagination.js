@@ -1,4 +1,6 @@
 import React from 'react'
+import { useEffect } from 'react';
+import {useNavigate} from 'react-router-dom';
 
 export default function Pagination(props) {
     const nPages=props.nPages;
@@ -12,9 +14,10 @@ export default function Pagination(props) {
     }
     console.warn('nPages -1',nPages);
     
-    const pageNumbers3 = [...Array(nPages + 3).keys()].filter(n => n !=0);
+    
     let pageNumbers=[];
-    for (let i = nPages-3; i < nPages+4; i++) {
+    
+    for (let i = currentPage-3; i < currentPage+4; i++) {
         if (i>0 && i<=lastPage) {
             pageNumbers.push(i);
         }
@@ -28,14 +31,26 @@ export default function Pagination(props) {
         
     
     const nextPage = () => {
-            if(currentPage !== nPages) setCurrentPage(currentPage + 1)
+             setCurrentPage(currentPage + 1)
     }
     const prevPage = () => {
         if(currentPage !== 1) setCurrentPage(currentPage - 1)
     }
     
+    useEffect(() => {
+   
+        urlParamUpdate(currentPage)
+      }, [currentPage])
 
-    
+      const navigate = useNavigate();
+
+    function urlParamUpdate(){
+        var queryParams = new URLSearchParams(window.location.search);
+queryParams.set("offset", parseInt(currentPage));
+// 👇️ navigate  URL programmatically
+  navigate({ search: queryParams.toString() });
+
+    }
 
   return (
     <div>Pagination
@@ -48,7 +63,7 @@ export default function Pagination(props) {
                 <li className="page-item">
                     <a className="page-link" 
                         onClick={prevPage} 
-                        href='#'>
+                        >
                         
                         Previous
                     </a>
@@ -66,7 +81,7 @@ export default function Pagination(props) {
 
                         <a onClick={() => setCurrentPage(pgNumber)}  
                             className='page-link' 
-                            href='#'>
+                            >
                             
                             {pgNumber}
                         </a>
@@ -75,7 +90,7 @@ export default function Pagination(props) {
                 ))}
                 {
                     currentPage != lastPage &&
-                    <li className="page-item"> <a className="page-link"  onClick={nextPage} href='#'>  Next</a> </li>    
+                    <li className="page-item"> <a className="page-link"  onClick={nextPage} >  Next</a> </li>    
                 }
                 
                 
