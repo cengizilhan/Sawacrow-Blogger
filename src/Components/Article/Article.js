@@ -7,20 +7,20 @@ import axios from "axios";
 export default function Article(props) {
   const [imgUrl, setimgUrl] = useState([])
 
-
+  console.error('sawacrow')
   useEffect(() => {
+  
     
 
 
     axios.get(`https://dummyblog.cengizilhan.com/wp-json/wp/v2/media/${props.featured_media}`).then(function (response) { // handle success
-    console.log(response.data.media_details.sizes.full.source_url);
-    setimgUrl(response.data.media_details.sizes.full.source_url);
     
+    setimgUrl(response.data.media_details.sizes.full.source_url);
+
     
   });
-  
 
-  }, [])
+  }, )
 
 
 
@@ -28,11 +28,11 @@ export default function Article(props) {
     <section className='article__container'>
       <a href={'./article/'+props.id}>
 
-{console.log(props)}
+
         
         <div className='article__container__image'>
-            <img className='img-fluid' width="401" height="232" alt="bla bla"
-             src={imgUrl}></img>
+            <img className='img-fluid sawacrow' width="401" height="232" alt="bla bla"
+             src={imgUrl} key={imgUrl}></img>
         </div>
         <div className='article__container__text'>
             <span>{props.title.rendered}</span>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import Pagination from '../Components/Listing/Pagination';
 import { useLocation } from "react-router-dom";
+import ArticleContainer from '../Components/Listing/ArticleContainer';
 
 export default function Listing() {
     const [data, setData] = useState([])
@@ -32,11 +33,14 @@ function getParam (){
                     setLoading(false);
                     setLastPage(res.headers['x-wp-totalpages']);
                     //res.headers['x-wp-total'] total records
+                    console.table(res.data)
                     
                 })
                 .catch(() => {
                     console.error('There was an error while retrieving the data')
                 })
+
+         
                 
     }, [currentPage])
 
@@ -46,7 +50,9 @@ function getParam (){
 
   return (
     <div>Listing
+      <ArticleContainer data={data} loading={loading} />
   
+
   
   <Pagination nPages={currentPage} lastPage={lastPage} currentPage={currentPage} setCurrentPage={setCurrentPage} />
 

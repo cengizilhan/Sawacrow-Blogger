@@ -40,3 +40,8 @@ Firebase Authen..  (authen.. eticaret projesinde olcak)
 
 Buglar:
 1-Article detail'de img first load'da broken img iconu görünüyor..
+
+sonra yapılacaklar:
+1- pagination geliştirilip npm paketi yapılacak.
+  üç noktaya tıklanınca tüm sayfalar dropdown vs olarak açılabilir
+  https://dribbble.com/shots/8873527-Pagination-DailyUI-day085

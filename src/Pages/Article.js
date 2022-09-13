@@ -15,7 +15,7 @@ export default function Article() {
     axios.get('https://dummyblog.cengizilhan.com/wp-json/wp/v2/posts/1001')
     .then(function (response) {
       // handle success
-      console.log(response);
+      
       setpost(response.data);
     })
     .catch(function (error) {
