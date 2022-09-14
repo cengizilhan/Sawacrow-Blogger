@@ -26,15 +26,13 @@ function getParam (){
     useEffect(() => {
       getParam();
       
-      
+      setLoading(true);
         axios.get('https://dummyblog.cengizilhan.com/wp-json/wp/v2/posts?page='+currentPage)
             .then(res => {
                     setData(res.data);
-                    setLoading(false);
                     setLastPage(res.headers['x-wp-totalpages']);
+                    setLoading(false);
                     //res.headers['x-wp-total'] total records
-                    console.table(res.data)
-                    
                 })
                 .catch(() => {
                     console.error('There was an error while retrieving the data')

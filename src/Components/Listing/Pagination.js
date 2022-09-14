@@ -12,7 +12,7 @@ export default function Pagination(props) {
     
    
     }
-    console.warn('nPages -1',nPages);
+    //console.warn('nPages -1',nPages);
     
     
     let pageNumbers=[];
@@ -26,7 +26,7 @@ export default function Pagination(props) {
          
 
     }
-    console.log('pagenumbers -1', pageNumbers)
+    //console.log('pagenumbers -1', pageNumbers)
     
         
     

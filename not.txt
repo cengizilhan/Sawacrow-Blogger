@@ -3,6 +3,7 @@ https://github.com/KunalN25/simple-react-pagination/blob/main/src/App.jsx
 Son durum:
 Article detail tamam gibi.
 örnek:
+article js hepsi load olunca basılacak. is loading --
 http://localhost:3000/1001
 son rütujlar yapılacak.
 https://developer.yoast.com/customization/apis/rest-api/ yoast seo api eklenecek. metalar falan.

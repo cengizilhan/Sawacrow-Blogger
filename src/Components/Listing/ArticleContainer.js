@@ -3,10 +3,13 @@ import Article from '../Article/Article'
 
 export default function ArticleContainer(props) {
     var postList=props.data;
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
+        setLoading(props.loading);
         console.log('article container', props.data)
         postList=props.data;
-    }, [])
+        console.log('loading consol',loading)
+    }, [props.data, props.loading])
     
 
     
@@ -21,7 +24,7 @@ export default function ArticleContainer(props) {
 
 {
 postList.map((x)=>(
-<Article {...x}></Article>
+<Article {...x}  key={x.id}   ></Article>
 
 ))
 
