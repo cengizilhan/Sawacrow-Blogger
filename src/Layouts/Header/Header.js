@@ -1,6 +1,7 @@
 import {React, useEffect} from 'react'
 import logo from '../../Assets/Multimedia/NORDICROSE.svg'
 import '../../Assets/Vendors/Hover-master/css/hover-min.css'
+import {gsap} from 'gsap'
 
 import './Header.scss'
 //import ScriptTag from 'react-script-tag';
@@ -8,6 +9,10 @@ import NavMenu from '../MobileMenu/NavMenu'
 
 export default function Header() {
 
+    useEffect(() => {
+        gsap.from('.img-logo', {duration: 1, y: -100, opacity: 0, ease: 'bounce.out'})
+        gsap.from('.header__right', {duration: 1, y: -100, opacity: 0, ease: 'bounce.out'})
+    }, [])
   
 
   return (
