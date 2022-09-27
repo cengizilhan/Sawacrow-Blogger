@@ -1,0 +1,14 @@
+@use '../../Assets/Css/variable.scss' as device;
+
+.SkeletonArticle{
+  
+  .card-img-top {
+    aspect-ratio: 304/176;
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
+}

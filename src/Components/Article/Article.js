@@ -1,8 +1,9 @@
 import {React, useEffect, useState }from "react";
 import './Article.scss'
+import PlaceholderSvg from "../../Assets/Multimedia/placeholder.svg";
 import axios from "axios";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import PlaceholderSvg from "../../Assets/Multimedia/placeholder.svg";
+
 
 
 export default function Article(props) {
@@ -25,10 +26,10 @@ export default function Article(props) {
 
 
   return (
-    <section className='article__container'>
-      <a href={'./article/'+props.id}>
+    <section className='article__container w-100'>
+      <a href={'./article/'+props?.id }>
 
-
+      <link rel="preload" as="image" href={imgUrl} />
         
         <div className='article__container__image'>
                           <LazyLoadImage
@@ -45,7 +46,7 @@ export default function Article(props) {
             
         </div>
         <div className='article__container__text'>
-            <span>{props.title.rendered}</span>
+            <span>{props.title?.rendered}</span>
             
             </div>
             </a>

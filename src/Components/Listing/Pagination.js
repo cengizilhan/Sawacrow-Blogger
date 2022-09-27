@@ -53,10 +53,10 @@ queryParams.set("offset", parseInt(currentPage));
     }
 
   return (
-    <div>Pagination
+    <div>
 
 <nav>
-            <ul className='pagination justify-content-center'>
+            <ul className='pagination justify-content-center mb-5'>
 
                 {
                 currentPage !== 1 && 

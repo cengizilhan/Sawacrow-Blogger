@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Article from '../Article/Article'
-
+import SkeletonArticle from '../Article/SkeletonArticle'
 export default function ArticleContainer(props) {
     var postList=props.data;
     const [loading, setLoading] = useState(true);
+    const fakeArr=[1,2,3,4,5,6,7,8,9,10];
     useEffect(() => {
         setLoading(props.loading);
         console.log('article container', props.data)
@@ -14,19 +15,27 @@ export default function ArticleContainer(props) {
 
     
   return (
-    <div>ArticleContainer
+    <div>
 
 <section>
 
 <section className="articleList">
 
-  <section className="articleList-container container">       
+  <section className="articleList-container ">       
 
 {
-postList.map((x)=>(
-<Article {...x}  key={x.id}   ></Article>
+  
+  
+  loading==true?fakeArr.map((y)=>(
+    <SkeletonArticle key={y} />
+  )):postList.map((x)=>(
+  
+        
+    <Article {...x}  key={x.id}   ></Article>
+    
+    
+    ))
 
-))
 
 
 }

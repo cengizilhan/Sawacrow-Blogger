@@ -1,5 +1,6 @@
 import {React, useEffect} from 'react'
 import logo from '../../Assets/Multimedia/NORDICROSE.svg'
+import '../../Assets/Vendors/Hover-master/css/hover-min.css'
 
 import './Header.scss'
 //import ScriptTag from 'react-script-tag';

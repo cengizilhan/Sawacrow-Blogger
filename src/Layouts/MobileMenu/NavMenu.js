@@ -1,6 +1,7 @@
 import React from 'react'
 import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import './NavMenu.scss'
+import '../../Assets/Vendors/Hover-master/css/hover-min.css'
 
 export default function NavMenu() {
   return (
@@ -12,10 +13,10 @@ export default function NavMenu() {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link href="#home">BLOG</Nav.Link>
-        <Nav.Link href="#link">ABOUT</Nav.Link>
-        <Nav.Link href="#link">LINKS</Nav.Link>
-        <Nav.Link href="#link">PROJECTS</Nav.Link>
+        <Nav.Link  className="hvr-bounce-to-bottom"  href="#home">BLOG</Nav.Link>
+        <Nav.Link  className="hvr-bounce-to-bottom"  href="#link">ABOUT</Nav.Link>
+        <Nav.Link  className="hvr-bounce-to-bottom"  href="/articlelist?offset=1">ARTICLES</Nav.Link>
+        <Nav.Link className="hvr-bounce-to-bottom" href="#link">PROJECTS</Nav.Link>
         {
           /*
           <NavDropdown title="Dropdown" id="basic-nav-dropdown">
