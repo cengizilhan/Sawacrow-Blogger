@@ -1,5 +1,5 @@
 
-# Sawacrow Blogger
+# Sawacrow Blogger V.1
  Sawacrow Blog Page
  
  TR: Wordpress API Server olarak kullanılıp, React.JS üzerinde farklı bir GUI ekranı tasarlandı.
