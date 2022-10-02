@@ -1,6 +1,7 @@
 
 # Sawacrow Blogger
  Sawacrow Blog Page
+ ![alt text](./SS/ss1-min.jpg)
 
 Demo: https://sawacrow-blogger.vercel.app/   		
 
