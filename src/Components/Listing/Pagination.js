@@ -1,19 +1,15 @@
 import React from 'react'
 import { useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
+import './Pagination.scss'
 
 export default function Pagination(props) {
-    const nPages=props.nPages;
+    
     
     const lastPage=props.lastPage;
     const currentPage=props.currentPage;
     const setCurrentPage=props.setCurrentPage;
-    const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
-    
-   
-    }
-    //console.warn('nPages -1',nPages);
-    
+
     
     let pageNumbers=[];
     
@@ -45,7 +41,7 @@ export default function Pagination(props) {
       const navigate = useNavigate();
 
     function urlParamUpdate(){
-        var queryParams = new URLSearchParams(window.location.search);
+        let queryParams = new URLSearchParams(window.location.search);
 queryParams.set("offset", parseInt(currentPage));
 // 👇️ navigate  URL programmatically
   navigate({ search: queryParams.toString() });
