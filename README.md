@@ -25,8 +25,9 @@ Wordpress Resource Site: https://dummyblog.cengizilhan.com/ (Fetch Resource)
  - React JS
 
 ![alt text](./SS/ss1.jpg)
-![alt text](./SS/ss1-min.jpg)
 ![alt text](./SS/ss2-min.jpg)
+![alt text](./SS/ss1-min.jpg)
+
 
 Use React With Wordpress Headless CMS.resource
 https://www.cloudways.com/blog/use-react-with-wordpress-to-create-headless-cms/
