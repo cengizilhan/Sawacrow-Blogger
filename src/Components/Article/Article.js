@@ -27,7 +27,7 @@ export default function Article(props) {
 
   return (
     <section className='article__container w-100'>
-      <a href={'./article/'+props?.id }>
+      <a href={'./article/'+props?.id } className='hvr-underline-from-left w-100'>
 
       <link rel="preload" as="image" href={imgUrl} />
         
@@ -36,7 +36,7 @@ export default function Article(props) {
                   wrapperClassName=" mx-auto d-block"
                   alt="article img"
                   placeholderSrc={PlaceholderSvg}
-                  width="auto"
+                  width="100%"
                   height={232}
                   className="img-fluid sawacrow"
   
