@@ -31,7 +31,7 @@ export default function Article() {
     <section>
       <Header></Header>
       
-      {/* article js */}
+
       
      
       <ArticleDetail post={post} ></ArticleDetail>

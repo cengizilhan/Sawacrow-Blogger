@@ -1,4 +1,6 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,13 +8,148 @@
   <link rel="stylesheet" href="css/ress.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> 
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://kit.fontawesome.com/800c1ef51d.js" crossorigin="anonymous </script>
-</head> 
+  <script src="https://kit.fontawesome.com/800c1ef51d.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
 
-<div class="swiper">
-      <div class="swiper-container">
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+  loop: true,
+  slidesPerView: 1.5,
+  spaceBetween: 62.5,
+  centeredSlides: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 80,
+      centeredSlides: true,
+    },
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+    formatFractionCurrent: function (n) {
+      return '0' + n;
+    },
+    formatFractionTotal: function (n) {
+      return '0' + n;
+    },
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+  </script>
+
+  <style>
+    .swiper {
+  padding-top:calc(10/ 1366 * 100vw);
+  overflow: visible;
+  max-width: calc( 552.14/ 1366 * 100vw);
+}
+
+.swiper-wrapper {
+  padding-bottom: calc(178/ 1366 * 100vw);
+}
+
+.swiper-slide {
+  height: calc( 240/ 1366 * 100vw);
+  background:#fff;
+  border-radius:calc( 30/ 1366 * 100vw);
+  border: 6px solid #B5E9EE;
+  margin-right: calc( 62.5/ 1366 * 100vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: calc(8/ 1366 * 100vw) calc(8/ 1366 * 100vw) calc(9/ 1366 * 100vw) rgb(0 0 0 / 16%);
+}
+
+.slide_text {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: calc(51/ 1366 * 100vw);
+    padding-right: calc(6/ 1366 * 100vw);
+    gap: calc(40/ 1366 * 100vw);
+  
+}
+
+.num {
+  font-family: NotoSansJP-Black;
+  font-size: calc(36/ 1366 * 100vw);
+  line-height: calc(43.2/ 1366 * 100vw);
+  color: #1F2774;
+  border-bottom: 3px solid #1F2774;
+}
+
+.text {
+  font-family: NotoSansJP-Regular;
+  font-size: calc(36/ 1366 * 100vw);
+  line-height: calc(43.2/ 1366 * 100vw);
+}
+
+.swiper-pagination{
+  position: absolute;
+    font-family: NotoSansJP-Bold;
+    font-size: calc( 28/ 1366 * 100vw);
+    line-height: calc( 40/ 1366 * 100vw);
+    top: calc( 37/ 1366 * 100vw);
+    text-align: center;
+    display: block;
+}
+
+.swiper-button-prev {
+  width: calc( 60/ 1366 * 100vw);
+  height: calc( 61/ 1366 * 100vw);
+  background-color: #F6F3DC;
+  border-radius: calc( 100/ 1366 * 100vw);
+  color: transparent;
+}
+
+.swiper-button-next {
+  width: calc( 60/ 1366 * 100vw);
+  height: calc( 61/ 1366 * 100vw);
+  background-color: #F6F3DC;
+  border-radius: calc( 100/ 1366 * 100vw);
+  color: transparent;
+}
+
+.gallery_navigation .fa-chevron-left:before {
+    content: "\f053";
+    font-size: calc( 28/ 1366 * 100vw);
+    position: absolute;
+    top: calc( 17/ 1366 * 100vw);
+    left: calc( 21/ 1366 * 100vw);
+    color: black;
+    font-weight: 900;
+}
+
+.gallery_navigation .fa-chevron-right:before {
+    content: "\f054";
+    font-size: calc( 28/ 1366 * 100vw);
+    position: absolute;
+    top: calc( 17/ 1366 * 100vw);
+    left: calc( 21/ 1366 * 100vw);
+    color: black;
+    font-weight: 900;
+}
+
+.gallery_navigation {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc( 52/ 1366 * 100vw) 0;
+    position: absolute;
+    width: calc( 276/ 1366 * 100vw);
+    left: calc( 137/ 1366 * 100vw);
+    text-align: center;
+    top: calc( 254/ 1366 * 100vw);
+}
+  </style>
+<div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="slide_text">
@@ -26,28 +163,33 @@
             <div class="text">入会審査・カード発行</div>
           </div>
         </div>
-        <div class="swiper-slide"><div class="slide_text">
+        <div class="swiper-slide">
+          <div class="slide_text">
             <div class="num">03</div>
             <div class="text">カード到着行</div>
           </div></div>
-        <div class="swiper-slide"><div class="slide_text">
+        <div class="swiper-slide">
+        <div class="slide_text">
             <div class="num">04</div>
             <div class="text">アプリをダウンロード</div>
-          </div></div>
-        <div class="swiper-slide"><div class="slide_text">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide_text">
             <div class="num">05</div>
             <div class="text">アプリでカード番号を確認</div>
           </div>
         </div>
       </div>
-    <div class="gallery_navigation">
-        <div class="swiper-button-prev"><i class="far fa-chevron-left"></i></div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"><i class="far fa-chevron-right"></i></div>
+    
     </div>
-    </div>
-    </div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
+
 <script src="js/main.js"></script>  
+
 </body>
+
 </html>

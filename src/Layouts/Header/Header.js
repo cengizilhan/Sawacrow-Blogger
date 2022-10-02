@@ -19,7 +19,7 @@ export default function Header() {
     <div className="container">
         <div className="row">
             <div className="col header__left">
-                <a href="./">
+                <a href="../" className='hvr-bounce-to-bottom'>
                 <img src={logo} width={290} height={27} alt="logo" className='img-fluid img-logo' />
                 </a>
                 

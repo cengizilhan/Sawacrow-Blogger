@@ -36,10 +36,10 @@ export default function Article(props) {
                   wrapperClassName=" mx-auto d-block"
                   alt="article img"
                   placeholderSrc={PlaceholderSvg}
-                  width={401}
+                  width="auto"
                   height={232}
                   className="img-fluid sawacrow"
-
+  
                   src={imgUrl}  key={imgUrl}
                   />
 

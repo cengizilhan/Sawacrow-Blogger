@@ -3,6 +3,7 @@ import ArticleHero from "../Components/ArticleHero/ArticleHero";
 import Article from "../Components/Article/Article";
 import "./ArticleList.scss";
 import axios from "axios";
+import ArticleDetailBlogs from "../Components/ArticleDetail/ArticleDetailBlogs";
 
 
 export default function ArticleList() {
@@ -26,32 +27,15 @@ export default function ArticleList() {
   }, [])
 
 
-
-
-  let article = {
-    title: "What to read next",
-    post: "lorem ipsum lorlaosdlao sdloq lwdoql doqwl",
-    img:"https://dummyblog.cengizilhan.com/wp-content/uploads/2022/08/wp_dummy_content_generator_1003-300x300.jpg"
-  }
-
-
-
   return (
     <section>
 
       <section className="articleList">
         <ArticleHero></ArticleHero>
         <span className="articleList-header">All Articles</span>
-        <section className="articleList-container container">       
+        <section className="articleList-container d-flex container">       
 
-{
-postList.map((x)=>(
-  <Article {...x}></Article>
-  
-  ))
-
-
-}
+        <ArticleDetailBlogs></ArticleDetailBlogs>
 
         </section>
       </section>

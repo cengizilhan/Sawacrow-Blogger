@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ArticleDetail.scss";
-//import heroImg from "../../Assets/Multimedia/article-hero.jpg";
+
 import twitterIcon from "../../Assets/Multimedia/twitter.svg";
 import facebookIcon from "../../Assets/Multimedia/facebook.svg";
 import ArticleDetailBottom from "./ArticleDetailBottom";
@@ -201,7 +201,7 @@ export default function ArticleDetail(props) {
         <ArticleDetailBottom author={author}></ArticleDetailBottom>
       </section>
 
-      <section className="articleDetailBlogs articleDetail__wrapper container">
+      <section className="articleDetailBlogscontainer ">
         <ArticleDetailBlogs></ArticleDetailBlogs>
       </section>
     </section>
