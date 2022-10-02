@@ -32,7 +32,7 @@ export default function ArticleDetailBlogs() {
 
   return (
     <div className='ArticleDetailBlogs'><span className='ArticleDetailBlogs__title'>What to read next</span>
-    <div className='ArticleDetailBlogs__posts'>
+    <div className='ArticleDetailBlogs__posts container'>
     {
   
   

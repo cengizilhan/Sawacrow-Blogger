@@ -19,7 +19,7 @@ export default function ArticleContainer(props) {
 
 <section>
 
-<section className="articleList">
+<section className="articleList px-3">
 
   <section className="articleList-container ">       
 
