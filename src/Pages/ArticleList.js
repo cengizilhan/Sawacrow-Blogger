@@ -32,7 +32,7 @@ export default function ArticleList() {
 
       <section className="articleList">
         <ArticleHero></ArticleHero>
-        <span className="articleList-header">All Articles</span>
+        <span className="articleList-header d-none"></span>
         <section className="articleList-container d-flex container">       
 
         <ArticleDetailBlogs></ArticleDetailBlogs>
