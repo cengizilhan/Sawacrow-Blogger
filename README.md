@@ -1,7 +1,7 @@
 
 # Sawacrow Blogger
  Sawacrow Blog Page
- ![alt text](./SS/ss1-min.jpg)
+ 
 
 Demo: https://sawacrow-blogger.vercel.app/   		
 
@@ -19,3 +19,7 @@ Wordpress Resource Site: https://dummyblog.cengizilhan.com/ (Fetch Resource)
  - Bootstrap 5.2
  - Wordpress Fetch API
  - React JS
+
+![alt text](./SS/ss1.jpg)
+![alt text](./SS/ss1-min.jpg)
+![alt text](./SS/ss2-min.jpg)
