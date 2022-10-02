@@ -195,7 +195,7 @@ export default function ArticleDetail(props) {
               __html: post.content ? post.content : "",
             }}
           ></div>
-        }
+      }
       </section>
       <section className="articleDetail__wrapper container">
         <ArticleDetailBottom author={author}></ArticleDetailBottom>

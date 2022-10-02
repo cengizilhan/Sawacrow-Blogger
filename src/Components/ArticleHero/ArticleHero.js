@@ -6,7 +6,7 @@ export default function ArticleHero() {
   return (
     
     <section className='articleHero text-center'>
-      <a href="/#">
+      <a href="../article/1003">
         <img src={heroImg} className='img-fluid' width="854" height="553" alt="herobanner"></img>
         <div className=' px-4 px-sm-5'>
         <h1>A few words about this blog platform, Ghost, and how this site was made</h1>
