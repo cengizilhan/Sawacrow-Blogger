@@ -6,6 +6,8 @@ Demo: https://sawacrow-blogger.vercel.app/
 
 Figma Theme: https://www.figma.com/community/file/825069539366152961
 
+Wordpress Resource Site: https://dummyblog.cengizilhan.com/ (Fetch Resource)
+
 
 **Scripts & Frameworks:**
  - Hover.css ( CSS Library)
