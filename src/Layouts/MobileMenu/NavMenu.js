@@ -1,7 +1,7 @@
 import React from 'react'
 import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import './NavMenu.scss'
-import '../../Assets/Vendors/Hover-master/css/hover-min.css'
+
 
 export default function NavMenu() {
   return (

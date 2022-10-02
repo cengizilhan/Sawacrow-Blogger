@@ -1,7 +1,9 @@
+table of content ve
+yost tüm parametreler
 https://github.com/KunalN25/simple-react-pagination/blob/main/src/App.jsx
+sitemap.xml
 
-
-article js hepsi load olunca basılacak. is loading --
+article js hepsi load olunca basılacak. is loading propu kullanılacak
 
 
 
@@ -10,6 +12,8 @@ article js hepsi load olunca basılacak. is loading --
 kalanlar:
 Anasayfa Skeleton
 anasayfa listing skeleton
+
+
 
 
 

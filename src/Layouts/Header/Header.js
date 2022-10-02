@@ -1,10 +1,8 @@
 import {React, useEffect} from 'react'
 import logo from '../../Assets/Multimedia/NORDICROSE.svg'
-import '../../Assets/Vendors/Hover-master/css/hover-min.css'
+import '../../Assets/Vendors/Hover-master/css/hover.css'
 import {gsap} from 'gsap'
-
 import './Header.scss'
-//import ScriptTag from 'react-script-tag';
 import NavMenu from '../MobileMenu/NavMenu'
 
 export default function Header() {
