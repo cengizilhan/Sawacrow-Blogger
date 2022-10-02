@@ -9,22 +9,10 @@ article js hepsi load olunca basılacak. is loading propu kullanılacak
 
 
 
-kalanlar:
-Anasayfa Skeleton
-anasayfa listing skeleton
 
 
 
 
-
-Olacaklar:
--Scss
--Skeleton loading 
--google lighthouse puanlama
--lazyload
--react-router-dom
--redux-thunk-asynch
--dark theme
 
 
 
