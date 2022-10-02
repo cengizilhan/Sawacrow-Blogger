@@ -21,6 +21,9 @@ footer,
       /* or 27px */
 
       text-decoration-line: underline;
+      &:hover{
+        color:#f7d200 !important;
+      }
     }
   }
   &__card {

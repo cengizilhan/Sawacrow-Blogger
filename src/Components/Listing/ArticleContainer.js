@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Article from '../Article/Article'
 import SkeletonArticle from '../Article/SkeletonArticle'
 export default function ArticleContainer(props) {
-    var postList=props.data;
+    let postList=props.data;
     const [loading, setLoading] = useState(true);
     const fakeArr=[1,2,3,4,5,6,7,8,9,10];
     useEffect(() => {
