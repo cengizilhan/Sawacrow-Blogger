@@ -4,7 +4,7 @@
  
  TR: Wordpress API Server olarak kullanılıp, React.JS üzerinde farklı bir GUI ekranı tasarlandı.
  
- EN: A different GUI screen was designed on React.JS by using the Wordpress API Server.
+ EN: A GUI screen was designed on React.JS by using the Wordpress API Server.
  
 
 Demo: https://sawacrow-blogger.vercel.app/   		
